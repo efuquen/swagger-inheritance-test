@@ -1,0 +1,9 @@
+{
+  "basePath": "http://localhost:8080/test-spec",
+  "swaggerVersion": "1.2",
+  "apiVersion": "4.0",
+  "apis": [{
+    "path": "/animals.json",
+    "description": "test api"
+  }]
+}

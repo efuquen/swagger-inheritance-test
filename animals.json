@@ -1,0 +1,43 @@
+{
+  "resourcePath": "/animals",
+  "basePath": "http://localhost:8080/api",
+  "swaggerVersion": "1.2",
+  "apiVersion": "4.0",
+  "models": {
+    "AnimalContainer": {
+      "id": "AnimalContainer",
+      "description": "Some list of animals",
+      "properties": {
+        "animals": {
+          "type":"List",
+          "description":"animal list",
+          "items":{
+             "$ref":"Animal"
+          }
+        }
+      }
+    },
+    "Animal": {
+      "id": "Animal",
+      "description": "Some sort of animal.",
+      "discriminator": "animalType",
+      "properties": { "animalType": { "type": "string"} }
+    },
+    "Dog": {
+      "id": "Dog",
+      "description": "Woof woof.",
+      "extends": "Animal",
+      "properties": { "speak": { "type": "string"} }
+    }
+  },
+  "apis": [{
+    "path": "/animals",
+    "description": "",
+    "operations": [{
+      "httpMethod": "GET",
+      "summary": "Get Animals",
+      "nickname": "getAnimals",
+      "responseClass": "AnimalContainer"
+    }]
+  }]
+}
