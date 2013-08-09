@@ -1,5 +1,5 @@
 {
-  "basePath": "http://localhost:8080/test-spec",
+  "basePath": "http://efuquen.github.io/swagger-inheritance-test/",
   "swaggerVersion": "1.2",
   "apiVersion": "4.0",
   "apis": [{
